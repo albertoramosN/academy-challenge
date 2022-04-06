@@ -1,4 +1,5 @@
 const images = document.querySelectorAll('img');
+const video = document.querySelector('iframe');
 
 const lazyImageObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -14,3 +15,5 @@ const lazyImageObserver = new IntersectionObserver((entries) => {
 images.forEach(entry => {
   lazyImageObserver.observe(entry);
 })
+
+lazyImageObserver.observe(video);
