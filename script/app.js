@@ -16,4 +16,4 @@ images.forEach(entry => {
   lazyImageObserver.observe(entry);
 })
 
-lazyImageObserver.observe(video);
+video.observe(video);
