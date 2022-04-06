@@ -1,4 +1,4 @@
-const images = $('img');
+const images = document.querySelectorAll('img');
 
 const lazyImageObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -11,6 +11,6 @@ const lazyImageObserver = new IntersectionObserver((entries) => {
 });
 
 
-images.each((index, entry) => {
+images.forEach(entry => {
   lazyImageObserver.observe(entry);
 })

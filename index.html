@@ -3,24 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <title>Get Your &lt;head&gt; Straight</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/index.css" />
-  <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
   
   <script>
-    // anti flicker
-    const antiflicker = () => {
-      document.body.style.visibility = 'hidden';
-      window.addEventListener('load', () => {
-        document.body.removeAttribute('style');
-        console.log('rxe')
+    let style = document.createElement("style"),
+        css = "body{visibility:hidden}";
+      document.head.appendChild(style);
+      style.type = "text/css";
+      style.appendChild(document.createTextNode(css));
+
+      // anti flicker
+      window.addEventListener("load", () => {
+        style.innerHTML = "";
+        console.log("rxe");
       });
-    }
-    antiflicker();
   </script>
 
 </head>

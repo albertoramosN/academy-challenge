@@ -1,4 +1,4 @@
-const card = $('.card');
+const card = document.querySelectorAll('.card');
 
 const newParagraph = document.createElement('p');
 newParagraph.classList.add('card__text')
@@ -6,7 +6,7 @@ const newText = document.createTextNode('Lorem ipsum dolor sit amet, consectetur
 newParagraph.appendChild(newText);
 
 // create dynamic content
-card.each((index, entry) => {
+card.forEach(entry => {
   const maxHeight = 400;
   let cardHeight = entry.offsetHeight;
   do {
