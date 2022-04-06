@@ -8,6 +8,11 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" async></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
   
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/index.css" />
+  
+  <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
+  <link rel="preload" href="background.jpg" as="image">
   <script>
     // Slow JS
     function wait(ms) {
@@ -25,15 +30,9 @@
         console.log('rxe')
       });
     }
-    wait(1000);
     antiflicker();
   </script>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/index.css" />
   
-  <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
-  <link rel="preload" href="background.jpg" as="image">
 </head>
 <body>
   <header>
