@@ -6,7 +6,6 @@
   <title>Get Your &lt;head&gt; Straight</title>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   
-  <link rel="stylesheet" href="styles/index.css" />
   
   <script>
     let style = document.createElement("style"),
@@ -21,6 +20,12 @@
         console.log("rxe");
       });
   </script>
+
+<link rel="stylesheet" href="styles/index.css" />
+<link rel="preload" href="banner.png" as="image" fetchpriority="high" />
+<link rel="preload" href="image-tree.jpg" as="image" fetchpriority="high" />
+<link rel="preconnect" href="http://youtube.com"/>
+
 
 </head>
 <body>
