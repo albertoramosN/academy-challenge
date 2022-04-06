@@ -8,18 +8,18 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" async></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
   
+  <link rel="preload" href="background.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/index.css" fetchpriority="low"/>
   
   <input type="hidden" id="csrf_token" value="ZGlkIHlvdSBmaW5kIG1lPwo=" />
-  <link rel="preload" href="background.jpg" as="image">
   <script>
     // anti flicker
     const antiflicker = () => {
       document.body.style.visibility = 'hidden';
       window.addEventListener('load', () => {
         document.body.removeAttribute('style');
-        console.log('rxe')
+        console.log('rxes')
       });
     }
     antiflicker();
@@ -156,7 +156,7 @@
       </article>
       <article class="gridbox__item">
         <section class="card">
-          <iframe class="card__img" src="https://www.youtube.com/embed/YadeD-_Cm9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="card__img" src="https://www.youtube.com/embed/YadeD-_Cm9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen fetchpriority="low"></iframe>
         </section>
       </article>
       <article class="gridbox__item">
@@ -217,7 +217,7 @@
       </article>
     </section>
   </main>
-  <script src="script/gridbox.js"></script>
-  <script src="script/app.js"></script>
+  <script src="script/gridbox.js" fetchpriority="low"></script>
+  <script src="script/app.js" fetchpriority="low"></script>
 </body>
 </html>
